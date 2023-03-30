@@ -1,11 +1,10 @@
-input.onButtonPressed(Button.A, function () {
-    radio.sendString("Holaaa ")
-})
 radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
 })
-input.onSound(DetectedSound.Loud, function () {
-    radio.sendString("Estoy bien ")
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("hola")
+    basic.showIcon(IconNames.Yes)
+    basic.pause(200)
+    basic.clearScreen()
 })
-radio.setGroup(1)
-input.setSoundThreshold(SoundThreshold.Loud, 191)
+radio.setGroup(111)
